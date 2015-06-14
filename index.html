@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+    <title></title>
+    <style>
+        body {
+            font-family: "Open Sans", Helvetica, Arial, sans-serif;
+        }
+
+        .section {
+            padding: 50px 0px;
+        }
+
+        .section-dark {
+            background-color: #f1f1f1;
+        }
+
+        .canvas {
+            background: url(img/pic.jpg);
+            background-size: cover;
+            height: 600px;
+            position: relative;
+        }
+
+        .canvas h1 {
+            width: 500px;
+            font-size: 60px;
+            font-family: "Open Sans";
+            color: #fff;
+            position: absolute;
+            font-weight: 900;
+            cursor: move;
+            padding: 0px;
+            padding: 20px;
+            border: 1px dashed #fff;
+        }
+
+        .canvas p {
+            width: 600px;
+            font-size: 20px;
+            font-family: "Open Sans";
+            color: #fff;
+            position: absolute;
+            top: 200px;
+            font-weight: 400;
+            cursor: move;
+            padding: 0px;
+            line-height: 32px;
+            padding: 20px;
+            border: 1px dashed #fff;
+        }
+
+        .canvas img {
+            padding: 20px;
+            border: 1px dashed #fff;
+            position: absolute;
+            left: 600px;
+            cursor: move;
+            top: 20px;
+        }
+
+        .section h2 {
+            font-size: 28px;
+        }
+
+        .section h3 {
+            font-size: 18px;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="section-dark section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>General Properties</h2>
+
+                <p>
+                    Metabox properties. Use this section to define the scope of metabox, set it's id and other things.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <form action="">
+                <div class="col-md-6">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Canvas Width</label>
+                                <input type="text" class="form-control" id="canvas_width" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Canvas Height</label>
+                                <input type="text" class="form-control" id="canvas_height">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Icon Width</label>
+                                <input value="auto" type="text" class="form-control" id="icon_width" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Icon Height</label>
+                                <input value="auto" type="text" class="form-control" id="icon_height">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Title Width</label>
+                                <input type="text" value="500px" class="form-control" id="title_width" placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Title font size</label>
+                                <input type="text" value="60px" class="form-control" id="title_fontsize">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Paragraph Width</label>
+                                <input type="text" value="600px" class="form-control" id="paragraph_width"
+                                       placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Paragraph font size</label>
+                                <input type="text" value="20px" class="form-control" id="paragraph_fontsize">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <label>Canvas background src</label>
+                                <input value="pic.jpg" type="text" class="form-control" id="canvas_src">
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Title Text</label>
+                        <textarea class="form-control" id="title_text" rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Paragraph Text</label>
+                        <textarea class="form-control" id="paragraph_text" rows="3"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <label>Icon src</label>
+                                <input value="icon.png" type="text" class="form-control" id="icon_src">
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="checkbox">
+                                <label>&nbsp;</label><br/>
+                                <label><input type="checkbox"> Hide icon</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="canvas">
+                    <img class="dr" src="img/icon.png" alt=""/>
+
+                    <h1 class="dr">Let There Be Light</h1>
+
+                    <p class="dr"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolorem ipsam non! A
+                        adipisci asperiores, aut, debitis doloribus explicabo, id natus non perferendis placeat quaerat
+                        quidem quisquam repudiandae soluta ut! </p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12" style="margin-top: 50px;">
+                        <a class="btn btn-primary prepare" href="#">Prepare Image</a>
+                        <a class="btn btn-success download" download="banner.jpg" href="#">Download Image</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="//code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/draggabilly/1.2.0/draggabilly.pkgd.min.js"></script>
+<script src="js/canvas.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var $draggables = $(".dr").draggabilly({
+            containement: true
+//            grid:[10,10]
+        });
+
+        $('.prepare').on('click',function(e){
+            e.preventDefault();
+            var border = $(".dr").css("border");
+            $(".dr").css("border","none");
+            html2canvas($(".canvas")[0], {
+                onrendered: function(canvas) {
+                    $(".download").attr("href",canvas.toDataURL("image/jpeg",1.0));
+                    $(".dr").css("border",border);
+                }
+            });
+
+        });
+
+    });
+</script>
+</body>
+</html>
