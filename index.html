@@ -80,6 +80,10 @@
             width:60px;
         }
 
+        #paragraph_text{
+            height:87px;
+        }
+
 
     </style>
 </head>
@@ -360,7 +364,9 @@
             $("#canvas").height($(this).val());
         });
         $("#canvas_src").on("input propertychange", function () {
-            $("#canvas").css("background", "url(" + $(this).val() + ")");
+            var imageurl = $(this).val().replace(/http[s]?:\/\//gi,"/images/");
+
+            $("#canvas").css("background", "url(" + imageurl + ")");
             $("#canvas").css("background-size", "cover");
         });
 
@@ -372,7 +378,8 @@
         });
 
         $("#icon_src").on("input propertychange", function () {
-            $("#icon").css("background-image", "url(" + $(this).val() + ")");
+            var imageurl = $(this).val().replace(/http[s]?:\/\//gi,"/images/");
+            $("#icon").css("background-image", "url(" + iconsrc + ")");
         });
 
         $("#hide_icon").on("click", function () {
