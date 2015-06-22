@@ -1,0 +1,116 @@
+body {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.main{
+    text-align: center;
+}
+
+.section {
+    padding: 50px 0px;
+}
+
+.section-dark {
+    background-color: #f1f1f1;
+}
+
+.canvas {
+    background: url(../img/pic.jpg);
+    background-size: cover;
+    height: 600px;
+    position: relative;
+    margin: auto;
+    overflow:hidden;
+}
+
+.canvas .overlay{
+    position: absolute;
+    top:0px;
+    left:0px;
+    background-color: #000;
+    opacity: 0.6;
+    height:2000px;
+    width:3000px;
+}
+
+.canvas h1 {
+    width: 500px;
+    font-size: 60px;
+    font-family: "Open Sans";
+    color: #fff;
+    position: absolute;
+    font-weight: 900;
+    cursor: move;
+    padding: 0px;
+    padding: 20px;
+    /*border: 1px dashed #fff;*/
+    line-height: 70px;
+    top:293px;
+    left:50px;
+}
+
+.canvas p {
+    width: 600px;
+    font-size: 20px;
+    font-family: "Open Sans";
+    color: #fff;
+    position: absolute;
+    top: 395px;
+    left:50px;
+    font-weight: 400;
+    cursor: move;
+    padding: 0px;
+    line-height: 32px;
+    padding: 20px;
+    /*border: 1px dashed #fff;*/
+}
+
+.canvas img {
+    padding: 20px;
+    /*border: 1px dashed #fff;*/
+    position: absolute;
+    left: 600px;
+    cursor: move;
+    top: 20px;
+    display: none;
+}
+
+.section h2 {
+    font-size: 28px;
+}
+
+.section h3 {
+    font-size: 18px;
+}
+
+form {
+    margin-top: 50px;
+}
+
+#title_color, #paragraph_color, #overlay_color{
+    height:40px;
+    width:50px;
+    padding:3px;
+}
+
+#paragraph_text{
+    height:87px;
+}
+
+#banner_download{
+    display: none;
+}
+
+footer{
+    margin-top:100px;
+    height:100px;
+    line-height: 100px;
+    background-color: #000;
+    color: #fff;
+}
+
+footer p{
+    padding:0px;
+    margin:0px;
+    text-align: center;
+}
