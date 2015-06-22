@@ -106,7 +106,7 @@
         });
 
         $("#icon_src").on("input propertychange", function () {
-            var imageurl = $(this).val().replace(/http[s]?:\/\//gi,"/images/");
+            var iconsrc = $(this).val().replace(/http[s]?:\/\//gi,"/images/");
             $("#icon").css("background-image", "url(" + iconsrc + ")");
         });
 
