@@ -22,6 +22,7 @@
             background-size: cover;
             height: 600px;
             position: relative;
+            margin: auto;
         }
 
         .canvas h1 {
@@ -35,6 +36,7 @@
             padding: 0px;
             padding: 20px;
             border: 1px dashed #fff;
+            line-height: 70px;
         }
 
         .canvas p {
@@ -73,6 +75,11 @@
             margin-top: 30px;
         }
 
+        #title_color, #paragraph_color{
+            height:40px;
+            width:60px;
+        }
+
 
     </style>
 </head>
@@ -102,7 +109,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Canvas Height</label>
-                                <input type="text" class="form-control" id="canvas_height">
+                                <input type="text" value="600" class="form-control" id="canvas_height">
                             </div>
                         </div>
                     </div>
@@ -124,7 +131,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Title Width</label>
-                                <input type="text" value="500px" class="form-control" id="title_width" placeholder="">
+                                <input type="text" value="500" class="form-control" id="title_width" placeholder="">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -138,7 +145,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Paragraph Width</label>
-                                <input type="text" value="600px" class="form-control" id="paragraph_width"
+                                <input type="text" value="600" class="form-control" id="paragraph_width"
                                        placeholder="">
                             </div>
                         </div>
@@ -149,17 +156,57 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="row">
-                        <div class="col-md-9">
+                        <div class="col-md-6">
                             <div class="form-group">
-                                <label>Canvas background src</label>
-                                <input value="pic.jpg" type="text" class="form-control" id="canvas_src">
-
+                                <label>Title line height</label>
+                                <input value="70px" type="text" class="form-control" id="title_lh"
+                                       placeholder="">
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Paragraph line height</label>
+                                <input value="32px" type="text" class="form-control" id="paragraph_lh">
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Title text alignment</label>
+                                <select class="form-control" name="" id="title_alignment">
+                                    <option value="left">Left</option>
+                                    <option value="center">Center</option>
+                                    <option value="right">Right</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Paragraph text alignment</label>
+                                <select class="form-control" name="" id="paragraph_alignment">
+                                    <option value="left">Left</option>
+                                    <option value="center">Center</option>
+                                    <option value="right">Right</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Title text color</label>
+                                <input value="#ffffff" type="color" class="form-control" id="title_color"
+                                       placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Paragraph color</label>
+                                <input value="#ffffff" type="color" class="form-control" id="paragraph_color">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -183,8 +230,20 @@
                         <div class="col-md-3">
                             <div class="checkbox">
                                 <label>&nbsp;</label><br/>
-                                <label><input type="checkbox"> Hide icon</label>
+                                <label><input type="checkbox" id="hide_icon"> Hide icon</label>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <label>Canvas background src</label>
+                                <input value="pic.jpg" type="text" class="form-control" id="canvas_src">
+
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+
                         </div>
                     </div>
                 </div>
@@ -196,12 +255,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="canvas">
-                    <img class="dr" src="img/icon.png" alt=""/>
+                <div class="canvas" id="canvas">
+                    <img class="dr" id="icon" src="img/icon.png" alt=""/>
 
-                    <h1 class="dr">Let There Be Light</h1>
+                    <h1 class="dr" id="title">Let There Be Light</h1>
 
-                    <p class="dr"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolorem ipsam non! A
+                    <p class="dr" id="para"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolorem ipsam
+                        non! A
                         adipisci asperiores, aut, debitis doloribus explicabo, id natus non perferendis placeat quaerat
                         quidem quisquam repudiandae soluta ut! </p>
                 </div>
@@ -219,7 +279,6 @@
 </div>
 
 <script src="//code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/draggabilly/1.2.0/draggabilly.pkgd.min.js"></script>
 <script src="js/canvas.js"></script>
 <script type="text/javascript">
@@ -229,19 +288,98 @@
 //            grid:[10,10]
         });
 
-        $('.prepare').on('click',function(e){
+        $('.prepare').on('click', function (e) {
             e.preventDefault();
             var border = $(".dr").css("border");
-            $(".dr").css("border","none");
-            html2canvas($(".canvas")[0], {
-                onrendered: function(canvas) {
-                    $(".download").attr("href",canvas.toDataURL("image/jpeg",1.0));
-                    $(".dr").css("border",border);
+            $(".dr").css("border", "none");
+            html2canvas($("#canvas")[0], {
+                onrendered: function (canvas) {
+                    $(".download").attr("href", canvas.toDataURL("image/jpeg", 1.0));
+                    $(".dr").css("border", border);
                 }
             });
             return false;
 
         });
+
+        $("#title_text").on("input propertychange", function () {
+            $("#title").html($(this).val());
+        });
+        $("#title_width").on("input propertychange", function () {
+            $("#title").width($(this).val());
+        });
+        $("#title_height").on("input propertychange", function () {
+            $("#title").height($(this).val());
+        });
+        $("#title_fontsize").on("input propertychange", function () {
+            $("#title").css("font-size", $(this).val());
+        });
+
+        $("#title_alignment").on("change", function () {
+            $("#title").css("text-align", $(this).val());
+        });
+        $("#title_lh").on("change", function () {
+            $("#title").css("line-height", $(this).val());
+        });
+        $("#title_color").on("change", function () {
+            $("#title").css("color", $(this).val());
+        });
+
+        $("#paragraph_text").on("input propertychange", function () {
+            $("#para").html($(this).val());
+        });
+        $("#paragraph_width").on("input propertychange", function () {
+            $("#para").width($(this).val());
+        });
+        $("#paragraph_height").on("input propertychange", function () {
+            $("#para").height($(this).val());
+        });
+
+        $("#paragraph_fontsize").on("input propertychange", function () {
+            $("#para").css("font-size", $(this).val());
+        });
+
+        $("#paragraph_alignment").on("change", function () {
+            $("#para").css("text-align", $(this).val());
+        });
+
+        $("#paragraph_lh").on("change", function () {
+            $("#para").css("line-height", $(this).val());
+        });
+
+        $("#paragraph_color").on("change", function () {
+            $("#para").css("color", $(this).val());
+        });
+
+
+        $("#canvas_width").on("input propertychange", function () {
+            $("#canvas").width($(this).val());
+        });
+
+        $("#canvas_height").on("input propertychange", function () {
+            $("#canvas").height($(this).val());
+        });
+        $("#canvas_src").on("input propertychange", function () {
+            $("#canvas").css("background", "url(" + $(this).val() + ")");
+            $("#canvas").css("background-size", "cover");
+        });
+
+        $("#icon_width").on("input propertychange", function () {
+            $("#icon").width($(this).val());
+        });
+        $("#icon_height").on("input propertychange", function () {
+            $("#icon").height($(this).val());
+        });
+
+        $("#icon_src").on("input propertychange", function () {
+            $("#icon").css("background-image", "url(" + $(this).val() + ")");
+        });
+
+        $("#hide_icon").on("click", function () {
+            $("#icon").css("visibility",  ($(this).is(":checked")?"hidden":"visible"));
+        });
+
+
 
     });
 </script>
