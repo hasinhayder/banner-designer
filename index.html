@@ -23,6 +23,17 @@
             height: 600px;
             position: relative;
             margin: auto;
+            overflow:hidden;
+        }
+
+        .canvas .overlay{
+            position: absolute;
+            top:0px;
+            left:0px;
+            background-color: #222;
+            opacity: 0.5;
+            height:2000px;
+            width:3000px;
         }
 
         .canvas h1 {
@@ -75,7 +86,7 @@
             margin-top: 30px;
         }
 
-        #title_color, #paragraph_color{
+        #title_color, #paragraph_color, #overlay_color{
             height:40px;
             width:60px;
         }
@@ -250,6 +261,36 @@
 
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Overlay color</label>
+                                <input value="#222222" type="color" class="form-control" id="overlay_color"
+                                       placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Overlay opacity</label>
+                                <input value="0.5" type="text" class="form-control" id="overlay_opacity">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Title fontface</label>
+                                <input value="Open Sans" type="text" class="form-control" id="title_font"
+                                       placeholder="">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Paragraph fontface</label>
+                                <input value="Open Sans" type="text" class="form-control" id="paragraph_font">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
@@ -260,6 +301,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="canvas" id="canvas">
+                    <div class="overlay">
+
+                    </div>
                     <img class="dr" id="icon" src="img/icon.png" alt=""/>
 
                     <h1 class="dr" id="title">Let There Be Light</h1>
@@ -322,11 +366,15 @@
         $("#title_alignment").on("change", function () {
             $("#title").css("text-align", $(this).val());
         });
-        $("#title_lh").on("change", function () {
+        $("#title_lh").on("input propertychange", function () {
             $("#title").css("line-height", $(this).val());
         });
         $("#title_color").on("change", function () {
             $("#title").css("color", $(this).val());
+        });
+
+        $("#title_font").on("input propertychange", function () {
+            $("#title").css("font-family", $(this).val());
         });
 
         $("#paragraph_text").on("input propertychange", function () {
@@ -347,12 +395,16 @@
             $("#para").css("text-align", $(this).val());
         });
 
-        $("#paragraph_lh").on("change", function () {
+        $("#paragraph_lh").on("input propertychange", function () {
             $("#para").css("line-height", $(this).val());
         });
 
         $("#paragraph_color").on("change", function () {
             $("#para").css("color", $(this).val());
+        });
+
+        $("#paragraph_font").on("input propertychange", function () {
+            $("#para").css("font-family", $(this).val());
         });
 
 
@@ -384,6 +436,15 @@
 
         $("#hide_icon").on("click", function () {
             $("#icon").css("visibility",  ($(this).is(":checked")?"hidden":"visible"));
+        });
+
+
+        $("#overlay_color").on("input propertychange", function () {
+            $(".overlay").css("background-color",$(this).val());
+        });
+
+        $("#overlay_opacity").on("input propertychange", function () {
+            $(".overlay").css("opacity",$(this).val());
         });
 
 
