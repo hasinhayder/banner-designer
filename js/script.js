@@ -103,7 +103,7 @@
 
         $("#icon_src").on("input propertychange", function () {
             var iconsrc = $(this).val().replace(/http[s]?:\/\//gi,"/images/");
-            $("#icon").css("background-image", "url(" + iconsrc + ")");
+            $("#icon").attr("src", iconsrc);
         });
 
         $("#hide_icon").on("click", function () {
