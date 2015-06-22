@@ -3,100 +3,9 @@
 <head lang="en">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
-    <title></title>
-    <style>
-        body {
-            font-family: "Open Sans", Helvetica, Arial, sans-serif;
-        }
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Banner Designer</title>
 
-        .section {
-            padding: 50px 0px;
-        }
-
-        .section-dark {
-            background-color: #f1f1f1;
-        }
-
-        .canvas {
-            background: url(img/pic.jpg);
-            background-size: cover;
-            height: 600px;
-            position: relative;
-            margin: auto;
-            overflow:hidden;
-        }
-
-        .canvas .overlay{
-            position: absolute;
-            top:0px;
-            left:0px;
-            background-color: #222;
-            opacity: 0.5;
-            height:2000px;
-            width:3000px;
-        }
-
-        .canvas h1 {
-            width: 500px;
-            font-size: 60px;
-            font-family: "Open Sans";
-            color: #fff;
-            position: absolute;
-            font-weight: 900;
-            cursor: move;
-            padding: 0px;
-            padding: 20px;
-            border: 1px dashed #fff;
-            line-height: 70px;
-        }
-
-        .canvas p {
-            width: 600px;
-            font-size: 20px;
-            font-family: "Open Sans";
-            color: #fff;
-            position: absolute;
-            top: 200px;
-            font-weight: 400;
-            cursor: move;
-            padding: 0px;
-            line-height: 32px;
-            padding: 20px;
-            border: 1px dashed #fff;
-        }
-
-        .canvas img {
-            padding: 20px;
-            border: 1px dashed #fff;
-            position: absolute;
-            left: 600px;
-            cursor: move;
-            top: 20px;
-        }
-
-        .section h2 {
-            font-size: 28px;
-        }
-
-        .section h3 {
-            font-size: 18px;
-        }
-
-        form {
-            margin-top: 30px;
-        }
-
-        #title_color, #paragraph_color, #overlay_color{
-            height:40px;
-            width:60px;
-        }
-
-        #paragraph_text{
-            height:87px;
-        }
-
-
-    </style>
 </head>
 <body>
 <div class="section-dark section">
@@ -118,7 +27,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Canvas Width</label>
-                                <input type="text" class="form-control" id="canvas_width" placeholder="">
+                                <input type="text" value="1140px" class="form-control" id="canvas_width" placeholder="">
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -212,18 +121,19 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Title text color</label>
-                                <input value="#ffffff" type="color" class="form-control" id="title_color"
+                                <label>Title fontface</label>
+                                <input value="Open Sans" type="text" class="form-control" id="title_font"
                                        placeholder="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Paragraph color</label>
-                                <input value="#ffffff" type="color" class="form-control" id="paragraph_color">
+                                <label>Paragraph fontface</label>
+                                <input value="Open Sans" type="text" class="form-control" id="paragraph_font">
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
@@ -245,7 +155,7 @@
                         <div class="col-md-3">
                             <div class="checkbox">
                                 <label>&nbsp;</label><br/>
-                                <label><input type="checkbox" id="hide_icon"> Hide icon</label>
+                                <label><input checked type="checkbox" id="hide_icon"> Hide icon</label>
                             </div>
                         </div>
                     </div>
@@ -265,29 +175,29 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Overlay color</label>
-                                <input value="#222222" type="color" class="form-control" id="overlay_color"
+                                <input value="#000000" type="color" class="form-control" id="overlay_color"
                                        placeholder="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Overlay opacity</label>
-                                <input value="0.5" type="text" class="form-control" id="overlay_opacity">
+                                <input value="0.6" type="text" class="form-control" id="overlay_opacity">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Title fontface</label>
-                                <input value="Open Sans" type="text" class="form-control" id="title_font"
+                                <label>Title text color</label>
+                                <input value="#ffffff" type="color" class="form-control" id="title_color"
                                        placeholder="">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Paragraph fontface</label>
-                                <input value="Open Sans" type="text" class="form-control" id="paragraph_font">
+                                <label>Paragraph color</label>
+                                <input value="#ffffff" type="color" class="form-control" id="paragraph_color">
                             </div>
                         </div>
                     </div>
@@ -306,19 +216,18 @@
                     </div>
                     <img class="dr" id="icon" src="img/icon.png" alt=""/>
 
-                    <h1 class="dr" id="title">Let There Be Light</h1>
+                    <h1 class="dr" id="title">Hellen Keller</h1>
 
-                    <p class="dr" id="para"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dolorem ipsam
-                        non! A
-                        adipisci asperiores, aut, debitis doloribus explicabo, id natus non perferendis placeat quaerat
-                        quidem quisquam repudiandae soluta ut! </p>
+                    <p class="dr" id="para"> The best and most beautiful things in the world cannot be seen or even
+                        touched - they must be felt with the heart. </p>
                 </div>
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12" style="margin-top: 50px;">
-                        <a class="btn btn-primary prepare">Prepare Image</a>
-                        <a class="btn btn-success download" download="banner.jpg" href="#">Download Image</a>
+                    <div class="col-md-12" style="margin-top: 50px; text-align: center">
+                        <a href="#" class="btn btn-primary prepare" value="Prepare Image">Prepare Banner</a>
+                        <a id="banner_download" href="#" class="btn btn-success download" download="banner.jpg"
+                           href="#">Download Image</a>
                     </div>
                 </div>
             </div>
@@ -329,127 +238,6 @@
 <script src="//code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/draggabilly/1.2.0/draggabilly.pkgd.min.js"></script>
 <script src="js/canvas.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        var $draggables = $(".dr").draggabilly({
-            containement: true
-//            grid:[10,10]
-        });
-
-        $('.prepare').on('click', function (e) {
-            e.preventDefault();
-            var border = $(".dr").css("border");
-            $(".dr").css("border", "none");
-            html2canvas($("#canvas")[0], {
-                onrendered: function (canvas) {
-                    $(".download").attr("href", canvas.toDataURL("image/jpeg", 1.0));
-                    $(".dr").css("border", border);
-                }
-            });
-            return false;
-
-        });
-
-        $("#title_text").on("input propertychange", function () {
-            $("#title").html($(this).val());
-        });
-        $("#title_width").on("input propertychange", function () {
-            $("#title").width($(this).val());
-        });
-        $("#title_height").on("input propertychange", function () {
-            $("#title").height($(this).val());
-        });
-        $("#title_fontsize").on("input propertychange", function () {
-            $("#title").css("font-size", $(this).val());
-        });
-
-        $("#title_alignment").on("change", function () {
-            $("#title").css("text-align", $(this).val());
-        });
-        $("#title_lh").on("input propertychange", function () {
-            $("#title").css("line-height", $(this).val());
-        });
-        $("#title_color").on("change", function () {
-            $("#title").css("color", $(this).val());
-        });
-
-        $("#title_font").on("input propertychange", function () {
-            $("#title").css("font-family", $(this).val());
-        });
-
-        $("#paragraph_text").on("input propertychange", function () {
-            $("#para").html($(this).val());
-        });
-        $("#paragraph_width").on("input propertychange", function () {
-            $("#para").width($(this).val());
-        });
-        $("#paragraph_height").on("input propertychange", function () {
-            $("#para").height($(this).val());
-        });
-
-        $("#paragraph_fontsize").on("input propertychange", function () {
-            $("#para").css("font-size", $(this).val());
-        });
-
-        $("#paragraph_alignment").on("change", function () {
-            $("#para").css("text-align", $(this).val());
-        });
-
-        $("#paragraph_lh").on("input propertychange", function () {
-            $("#para").css("line-height", $(this).val());
-        });
-
-        $("#paragraph_color").on("change", function () {
-            $("#para").css("color", $(this).val());
-        });
-
-        $("#paragraph_font").on("input propertychange", function () {
-            $("#para").css("font-family", $(this).val());
-        });
-
-
-        $("#canvas_width").on("input propertychange", function () {
-            $("#canvas").width($(this).val());
-        });
-
-        $("#canvas_height").on("input propertychange", function () {
-            $("#canvas").height($(this).val());
-        });
-        $("#canvas_src").on("input propertychange", function () {
-            var imageurl = $(this).val().replace(/http[s]?:\/\//gi,"/images/");
-
-            $("#canvas").css("background", "url(" + imageurl + ")");
-            $("#canvas").css("background-size", "cover");
-        });
-
-        $("#icon_width").on("input propertychange", function () {
-            $("#icon").width($(this).val());
-        });
-        $("#icon_height").on("input propertychange", function () {
-            $("#icon").height($(this).val());
-        });
-
-        $("#icon_src").on("input propertychange", function () {
-            var imageurl = $(this).val().replace(/http[s]?:\/\//gi,"/images/");
-            $("#icon").css("background-image", "url(" + iconsrc + ")");
-        });
-
-        $("#hide_icon").on("click", function () {
-            $("#icon").css("visibility",  ($(this).is(":checked")?"hidden":"visible"));
-        });
-
-
-        $("#overlay_color").on("input propertychange", function () {
-            $(".overlay").css("background-color",$(this).val());
-        });
-
-        $("#overlay_opacity").on("input propertychange", function () {
-            $(".overlay").css("opacity",$(this).val());
-        });
-
-
-
-    });
-</script>
+<script src="js/script.js"></script>
 </body>
 </html>

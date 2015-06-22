@@ -3,6 +3,8 @@
  Copyright (c) 2013 Niklas von Hertzen
 
  Released under MIT License
+
+ Modified by Hasin Hayder - disabled Image smoothness and CSS BG-Image support for size=cover
  */
 
 (function(window, document, undefined){
@@ -826,7 +828,7 @@
                 ctx = canvas.getContext('2d'),
                 gradient, grad;
 
-            canvas.imageSmoothingEnabled=true;
+            ctx.imageSmoothingEnabled=false;
 
             canvas.width = bounds.width;
             canvas.height = bounds.height;
