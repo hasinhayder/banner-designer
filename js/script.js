@@ -12,13 +12,9 @@
         $('.prepare').on('click', function (e) {
             var s = $(window).scrollTop();
             e.preventDefault();
-            e.stopPropagation();
-            var border = $(".dr").css("border");
-            $(".dr").css("border", "none");
             html2canvas($("#canvas")[0], {
                 onrendered: function (canvas) {
                     $(".download").attr("href", canvas.toDataURL("image/jpeg", 1.0));
-                    $(".dr").css("border", border);
                     $(window).scrollTop(s);
                     $("#banner_download").show();
                 }
