@@ -94,6 +94,10 @@
             $("#para").css("text-align", $(this).val());
         });
 
+        $("#canvas_bg_position").on("change", function () {
+            $("#canvas").css("background-position", $(this).val());
+        });
+
         $("#paragraph_lh").on("input propertychange", function () {
             $("#para").css("line-height", $(this).val());
         });

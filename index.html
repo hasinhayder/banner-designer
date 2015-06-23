@@ -205,15 +205,29 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-6">
             <div class="form-group">
-                <label>Canvas background source (paste any url)</label>
+                <label>Canvas background image url</label>
                 <input value="pic.jpg" type="text" class="form-control" id="canvas_src">
 
             </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Canvas background position</label>
+                <select class="form-control" id="canvas_bg_position">
+                    <option value="center center">Center</option>
+                    <option value="left top">Left Top</option>
+                    <option value="left center">Left Center</option>
+                    <option value="left bottom">Left Bottom</option>
+                    <option value="right top">Right Top</option>
+                    <option value="right center">Right Center</option>
+                    <option value="right bottom">Right Bottom</option>
+                    <option value="center top">Center Top</option>
+                    <option value="center bottom">Center Bottom</option>
+                </select>
 
+            </div>
         </div>
     </div>
     <div class="row">
@@ -224,7 +238,7 @@
                        placeholder="">
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
             <div class="form-group">
                 <label>Overlay opacity</label>
                 <input value="0.6" type="text" class="form-control" id="overlay_opacity">
@@ -316,6 +330,6 @@
 <script src="//code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/draggabilly/1.2.0/draggabilly.pkgd.min.js"></script>
 <script src="js/canvas.js"></script>
-<script src="js/script.js?4"></script>
+<script src="js/script.js?5"></script>
 </body>
 </html>
