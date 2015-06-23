@@ -43,10 +43,11 @@ body {
     cursor: move;
     padding: 0px;
     padding: 20px;
-    /*border: 1px dashed #fff;*/
     line-height: 70px;
     top:293px;
     left:50px;
+    border-style:solid;
+    border-width:0px;
 }
 
 .canvas p {
@@ -62,7 +63,17 @@ body {
     padding: 0px;
     line-height: 32px;
     padding: 20px;
-    /*border: 1px dashed #fff;*/
+    border-style:solid;
+    border-width: 0px;
+
+}
+
+.vc{
+    padding-top:10px;
+}
+
+.vc label{
+    font-weight:normal;
 }
 
 .canvas img {
@@ -87,7 +98,7 @@ form {
     margin-top: 50px;
 }
 
-#title_color, #paragraph_color, #overlay_color{
+input[type=color]{
     height:40px;
     width:50px;
     padding:3px;

@@ -134,7 +134,36 @@
             </div>
         </div>
     </div>
-
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Title border width</label>
+                <input value="0px" type="text" class="form-control" id="title_border_width"
+                       placeholder="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Paragraph border width</label>
+                <input value="0px" type="text" class="form-control" id="paragraph_border_width">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Title border color</label>
+                <input value="#ffffff" type="color" class="form-control" id="title_border_color"
+                       placeholder="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Paragraph border color</label>
+                <input value="#ffffff" type="color" class="form-control" id="paragraph_border_color">
+            </div>
+        </div>
+    </div>
 </div>
 <div class="col-md-6">
     <div class="form-group">
@@ -197,9 +226,8 @@
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label>Paragraph color</label>
+                <label>Paragraph text color</label>
                 <input value="#ffffff" type="color" class="form-control" id="paragraph_color">
-                <label><input checked type="checkbox" id="title_bg_transparent"> Transparent</label>
             </div>
         </div>
     </div>
@@ -207,49 +235,33 @@
         <div class="col-md-6">
             <div class="form-group">
                 <label>Title background color</label>
-                <input value="#ffffff" type="color" class="form-control" id="title_bg_color"
-                       placeholder="">
-                <label><input checked type="checkbox" id="paragraph_bg_transparent"> Transparent</label>
+                <div class="row">
+                    <div class="col-md-4">
+                        <input value="#ffffff" type="color" class="form-control" id="title_bg_color">
+                    </div>
+                    <div class="col-md-8 vc">
+                        <label><input checked type="checkbox" id="title_bg_transparent"> Transparent</label>
+                    </div>
+                </div>
 
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
                 <label>Paragraph background color</label>
-                <input value="#ffffff" type="color" class="form-control" id="paragraph_bg_color">
+                <div class="row">
+                    <div class="col-md-4">
+                        <input value="#ffffff" type="color" class="form-control" id="paragraph_bg_color">
+                    </div>
+                    <div class="col-md-8 vc">
+                        <label><input checked type="checkbox" id="paragraph_bg_transparent"> Transparent</label>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label>Title border width</label>
-                <input value="#ffffff" type="color" class="form-control" id="title_border_width"
-                       placeholder="">
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label>Paragraph border width</label>
-                <input value="#ffffff" type="color" class="form-control" id="paragraph_border_width">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label>Title border color</label>
-                <input value="#ffffff" type="color" class="form-control" id="title_border_color"
-                       placeholder="">
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label>Paragraph border color</label>
-                <input value="#ffffff" type="color" class="form-control" id="paragraph_border_color">
-            </div>
-        </div>
-    </div>
+
 </div>
 </form>
 </div>

@@ -41,13 +41,37 @@
         $("#title_lh").on("input propertychange", function () {
             $("#title").css("line-height", $(this).val());
         });
+
+        $("#title_border_width").on("input propertychange", function () {
+            $("#title").css("border-width", $(this).val());
+        });
+        $("#title_border_color").on("change", function () {
+            $("#title").css("border-color", $(this).val());
+        });
+
         $("#title_color").on("change", function () {
             $("#title").css("color", $(this).val());
+        });
+
+        $("#title_bg_color").on("change", function () {
+            if($("#title_bg_transparent").is(":checked"))
+                $("#title").css("background","none");
+            else
+                $("#title").css("background-color", $(this).val());
+        });
+
+        $("#title_bg_transparent").on("change", function () {
+            if($(this).is(":checked"))
+                $("#title").css("background","none");
+            else
+                $("#title").css("background-color", $("#title_bg_color").val());
         });
 
         $("#title_font").on("input propertychange", function () {
             $("#title").css("font-family", $(this).val());
         });
+
+
 
         $("#paragraph_text").on("input propertychange", function () {
             $("#para").html($(this).val());
@@ -71,8 +95,29 @@
             $("#para").css("line-height", $(this).val());
         });
 
+        $("#paragraph_border_width").on("input propertychange", function () {
+            $("#para").css("border-width", $(this).val());
+        });
+        $("#paragraph_border_color").on("change", function () {
+            $("#para").css("border-color", $(this).val());
+        });
+
         $("#paragraph_color").on("change", function () {
             $("#para").css("color", $(this).val());
+        });
+
+        $("#paragraph_bg_color").on("change", function () {
+            if($("#paragraph_bg_transparent").is(":checked"))
+                $("#para").css("background","none");
+            else
+                $("#para").css("background-color", $(this).val());
+        });
+
+        $("#paragraph_bg_transparent").on("change", function () {
+            if($(this).is(":checked"))
+                $("#para").css("background","none");
+            else
+                $("#para").css("background-color", $("#paragraph_bg_color").val());
         });
 
         $("#paragraph_font").on("input propertychange", function () {
