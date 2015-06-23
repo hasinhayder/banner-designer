@@ -41,6 +41,9 @@
         $("#title_lh").on("input propertychange", function () {
             $("#title").css("line-height", $(this).val());
         });
+        $("#title_padding").on("input propertychange", function () {
+            $("#title").css("padding", $(this).val());
+        });
 
         $("#title_border_width").on("input propertychange", function () {
             $("#title").css("border-width", $(this).val());
@@ -93,6 +96,10 @@
 
         $("#paragraph_lh").on("input propertychange", function () {
             $("#para").css("line-height", $(this).val());
+        });
+
+        $("#paragraph_padding").on("input propertychange", function () {
+            $("#para").css("padding", $(this).val());
         });
 
         $("#paragraph_border_width").on("input propertychange", function () {
