@@ -10,202 +10,250 @@
 <body>
 <a href="https://github.com/hasinhayder/banner-designer"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 <div class="section-dark section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 main">
-                <h2>An Awesome Banner Designer</h2>
+<div class="container">
+<div class="row">
+    <div class="col-md-12 main">
+        <h2>An Awesome Banner Designer</h2>
 
-                <p>
-                    Drag and place the text blocks, add image background, change color and font families and design beautiful banners instantly!
-                </p>
+        <p>
+            Drag and place the text blocks, add image background, change color and font families and design beautiful banners instantly!
+        </p>
+    </div>
+</div>
+<div class="row">
+<form action="">
+<div class="col-md-6">
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Canvas width</label>
+                <input type="text" value="1140px" class="form-control" id="canvas_width" placeholder="">
             </div>
         </div>
-        <div class="row">
-            <form action="">
-                <div class="col-md-6">
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Canvas width</label>
-                                <input type="text" value="1140px" class="form-control" id="canvas_width" placeholder="">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Canvas height</label>
-                                <input type="text" value="600" class="form-control" id="canvas_height">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Icon width</label>
-                                <input value="auto" type="text" class="form-control" id="icon_width" placeholder="">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Icon height</label>
-                                <input value="auto" type="text" class="form-control" id="icon_height">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Title width</label>
-                                <input type="text" value="500" class="form-control" id="title_width" placeholder="">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Title font size</label>
-                                <input type="text" value="60px" class="form-control" id="title_fontsize">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Paragraph width</label>
-                                <input type="text" value="600" class="form-control" id="paragraph_width"
-                                       placeholder="">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Paragraph font size</label>
-                                <input type="text" value="20px" class="form-control" id="paragraph_fontsize">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Title line height</label>
-                                <input value="70px" type="text" class="form-control" id="title_lh"
-                                       placeholder="">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Paragraph line height</label>
-                                <input value="32px" type="text" class="form-control" id="paragraph_lh">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Title text alignment</label>
-                                <select class="form-control" name="" id="title_alignment">
-                                    <option value="left">Left</option>
-                                    <option value="center">Center</option>
-                                    <option value="right">Right</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Paragraph text alignment</label>
-                                <select class="form-control" name="" id="paragraph_alignment">
-                                    <option value="left">Left</option>
-                                    <option value="center">Center</option>
-                                    <option value="right">Right</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Title fontface</label>
-                                <input value="Open Sans" type="text" class="form-control" id="title_font"
-                                       placeholder="">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Paragraph fontface</label>
-                                <input value="Open Sans" type="text" class="form-control" id="paragraph_font">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label>Title text</label>
-                        <textarea class="form-control" id="title_text" rows="2">Hellen Keller</textarea>
-                    </div>
-                    <div class="form-group">
-                        <label>Paragraph text</label>
-                        <textarea class="form-control" id="paragraph_text" rows="3">The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart. </textarea>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-9">
-                            <div class="form-group">
-                                <label>Icon source (paste any url)</label>
-                                <input value="icon.png" type="text" class="form-control" id="icon_src">
-
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="checkbox">
-                                <label>&nbsp;</label><br/>
-                                <label><input checked type="checkbox" id="hide_icon"> Hide icon</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-9">
-                            <div class="form-group">
-                                <label>Canvas background source (paste any url)</label>
-                                <input value="pic.jpg" type="text" class="form-control" id="canvas_src">
-
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label>Overlay color</label>
-                                <input value="#000000" type="color" class="form-control" id="overlay_color"
-                                       placeholder="">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Overlay opacity</label>
-                                <input value="0.6" type="text" class="form-control" id="overlay_opacity">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Title text color</label>
-                                <input value="#ffffff" type="color" class="form-control" id="title_color"
-                                       placeholder="">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Paragraph color</label>
-                                <input value="#ffffff" type="color" class="form-control" id="paragraph_color">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Canvas height</label>
+                <input type="text" value="600" class="form-control" id="canvas_height">
+            </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Icon width</label>
+                <input value="auto" type="text" class="form-control" id="icon_width" placeholder="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Icon height</label>
+                <input value="auto" type="text" class="form-control" id="icon_height">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Title width</label>
+                <input type="text" value="500" class="form-control" id="title_width" placeholder="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Title font size</label>
+                <input type="text" value="60px" class="form-control" id="title_fontsize">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Paragraph width</label>
+                <input type="text" value="600" class="form-control" id="paragraph_width"
+                       placeholder="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Paragraph font size</label>
+                <input type="text" value="20px" class="form-control" id="paragraph_fontsize">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Title line height</label>
+                <input value="70px" type="text" class="form-control" id="title_lh"
+                       placeholder="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Paragraph line height</label>
+                <input value="32px" type="text" class="form-control" id="paragraph_lh">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Title text alignment</label>
+                <select class="form-control" name="" id="title_alignment">
+                    <option value="left">Left</option>
+                    <option value="center">Center</option>
+                    <option value="right">Right</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Paragraph text alignment</label>
+                <select class="form-control" name="" id="paragraph_alignment">
+                    <option value="left">Left</option>
+                    <option value="center">Center</option>
+                    <option value="right">Right</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Title fontface</label>
+                <input value="Open Sans" type="text" class="form-control" id="title_font"
+                       placeholder="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Paragraph fontface</label>
+                <input value="Open Sans" type="text" class="form-control" id="paragraph_font">
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="col-md-6">
+    <div class="form-group">
+        <label>Title text</label>
+        <textarea class="form-control" id="title_text" rows="2">Hellen Keller</textarea>
+    </div>
+    <div class="form-group">
+        <label>Paragraph text</label>
+        <textarea class="form-control" id="paragraph_text" rows="3">The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart. </textarea>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="form-group">
+                <label>Icon source (paste any url)</label>
+                <input value="icon.png" type="text" class="form-control" id="icon_src">
+
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="checkbox">
+                <label>&nbsp;</label><br/>
+                <label><input checked type="checkbox" id="hide_icon"> Hide icon</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <div class="form-group">
+                <label>Canvas background source (paste any url)</label>
+                <input value="pic.jpg" type="text" class="form-control" id="canvas_src">
+
+            </div>
+        </div>
+        <div class="col-md-3">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="form-group">
+                <label>Overlay color</label>
+                <input value="#000000" type="color" class="form-control" id="overlay_color"
+                       placeholder="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Overlay opacity</label>
+                <input value="0.6" type="text" class="form-control" id="overlay_opacity">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Title text color</label>
+                <input value="#ffffff" type="color" class="form-control" id="title_color"
+                       placeholder="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Paragraph color</label>
+                <input value="#ffffff" type="color" class="form-control" id="paragraph_color">
+                <label><input checked type="checkbox" id="title_bg_transparent"> Transparent</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Title background color</label>
+                <input value="#ffffff" type="color" class="form-control" id="title_bg_color"
+                       placeholder="">
+                <label><input checked type="checkbox" id="paragraph_bg_transparent"> Transparent</label>
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Paragraph background color</label>
+                <input value="#ffffff" type="color" class="form-control" id="paragraph_bg_color">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Title border width</label>
+                <input value="#ffffff" type="color" class="form-control" id="title_border_width"
+                       placeholder="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Paragraph border width</label>
+                <input value="#ffffff" type="color" class="form-control" id="paragraph_border_width">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Title border color</label>
+                <input value="#ffffff" type="color" class="form-control" id="title_border_color"
+                       placeholder="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label>Paragraph border color</label>
+                <input value="#ffffff" type="color" class="form-control" id="paragraph_border_color">
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+</div>
+</div>
 </div>
 <div class="section">
     <div class="container">
@@ -241,6 +289,6 @@
 <script src="//code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/draggabilly/1.2.0/draggabilly.pkgd.min.js"></script>
 <script src="js/canvas.js"></script>
-<script src="js/script.js?3"></script>
+<script src="js/script.js?1"></script>
 </body>
 </html>
