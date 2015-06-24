@@ -1,8 +1,7 @@
 ;(function($){
     $(document).ready(function () {
         var $draggables = $(".dr").draggabilly({
-            containement: true
-//            grid:[10,10]
+            containment: '#canvas'
         });
 
         $draggables.on('dragStart',function(){
